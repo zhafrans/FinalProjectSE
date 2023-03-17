@@ -1,0 +1,32 @@
+DECLARE “namaProduk” with string
+DECLARE “hargaProduk” with number
+DECLARE “qty” with number
+DECLARE "selesaiMemilih" with false
+
+WHILE "selesaiMemilih" = false
+  DO
+  INPUT "namaProduk"
+  INPUT "qty"
+
+  IF nama produk = "baju" THEN
+    hargaProduk = 60000
+  ELSE IF nama produk = "celana" THEN
+    hargaProduk = 50000
+  ELSE IF nama produk = "topi" THEN
+    hargaProduk = 25000
+  ELSE
+    PRINT "Produk tidak ada"
+    CONTINUE
+
+  totalHarga += hargaProduk times qty
+  
+  DECLARE lanjutMemilih with string
+  INPUT lanjutMemilih
+
+  IF lanjutMemilih = "Ya"
+    selesaiMemilih = false
+  ELSE
+    selesaiMemilih = true
+END WHILE
+
+PRINT "Total harga = " + totalHarga
